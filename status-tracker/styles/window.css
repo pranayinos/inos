@@ -1,0 +1,68 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Helvetica, Arial;
+}
+
+body.original {
+  background: url("../img/original.png") center 75px no-repeat;
+  position: relative;
+  -webkit-app-region: drag;
+}
+
+button {
+  -webkit-app-region: no-drag;
+}
+
+h1 {
+  padding: 0.6em 0;
+  margin: 0;
+  text-align: center;
+  border-bottom: 1px solid #CCC;
+  background: #244f51;
+  font-size: 24px;
+}
+
+button {
+  width: 200px;
+  height: 30px;
+  font-size: 16px;
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  margin-left: -100px;
+}
+
+#main {
+  position: absolute;
+  left:45px;
+  top: 80px;
+  width: 70%;
+}
+
+
+
+span{
+	color: white;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+#stats p {
+  text-align: center;
+  margin: 0 0 0.5em;
+  font-size: 12px;
+  font-weight: bold;
+  color: #888;
+}
+
+#stats p span {
+  font-style: italic;
+  font-weight: normal;
+}
+
+.copycat h1 {
+  background: #444;
+}
