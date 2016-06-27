@@ -1,27 +1,62 @@
 <!DOCTYPE html>
+<html lang="en">
 <html>
 <head>
 
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="assets/third-party/js/jquery-1.12.3.js"></script>
 	<script src="scripts/window.js"></script>
-	<link rel="stylesheet" href="styles/window.css">
+	<link rel="stylesheet" href="styles/bootstrap.min.css">
+	
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Rammetto+One" />
+	
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<style>
+	.well-lg { 
+		background-color: #99b3ff; /* Blue */
+		color: #ffffff;
+	}
+	.head { 
+		color: #2e6da4;
+	}
+		
+	h3 {
+	font-family: 'Rammetto One';
+	font-size: 28px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 15.4px;
+	}
+	</style>
 </head>
 
-<body class="original">
-<h1>Status Tracker</h1>
-<div id="main">
-<h2> Login </h2>
-<form name="login" method="post" action="http://localhost:4567/login" id="login">
-<input type = "text" placeholder="Username" name="username" id="username"/>
-<input type = "password" placeholder="Password" name="password" id="password"/>
+<body>
+<div class="container">
+<h3 class="text-center">Status Tracker</h3>
+<div class="well well-lg">
+<div class="col-sm-12 text-center"><h4 class="head"> Login </h4></div>
+<div class="col-sm-12">&nbsp;</div>
+<form role="form" name="login" method="post" action="http://localhost:4567/login" id="login">
+    <div class="form-group">
+      <label for="username">Username:</label>
+      <input type="text" class="form-control" id="username" placeholder="Username" name="username">
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" class="form-control" id="password" placeholder="Password" name="password">
+    </div>
+	<div class="col-sm-12" id="display">&nbsp;</div>
+	<div class="col-sm-12"><button class="btn btn-primary btn-block">Login!</button></div>
 </form>
 </div>
-
-<div id="display">
-
-</div>
-<button id="login-button">Login!</button>
-
 </body>
 </html>

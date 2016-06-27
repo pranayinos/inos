@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="assets/third-party/js/jquery-1.12.3.js"></script>
+	<script src="scripts/window.js"></script>
+	<link rel="stylesheet" href="styles/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Rammetto+One" />
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<style>
+	.well-custom { 
+		background-color: #99b3ff; /* Blue */
+		color: #ffffff;
+	}
+	.head { 
+		color: #2e6da4;
+	}
+	/*
+	.container { 
+		background-color: #2e6da4;
+		color: #ffffff;
+	}
+	*/
+	.float-extreme-left {
+		float: left 
+	}
+	
+	.float-mid-left {
+		float: left;
+		margin-left	: 25px;	
+	}
+	.top-10{
+		top: 5px 
+	}
+	.label-pad{
+		padding-top: 4px;
+
+	}
+	.hide{
+		display : none;
+	}
+	h3 {
+	font-family: 'Rammetto One';
+	font-size: 28px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 15.4px;
+	}
+	
+	</style>
+</head>
+
+<body>
+<div class="container">
+<h3 class="text-center limelight">Status Tracker</h3>
+<div class="well well-custom">
+<div class="col-sm-12 text-center"><h4 class="head"> Current Status </h4></div>
+
+<form role="form" name="statusUpdate" method="post" action="http://localhost:4567/login" id="login">
+   <div class="radio">
+		<label class="label-pad"><input type="radio" name="optradio" value="Lunch">Lunch</label>
+	</div>
+	<div class="radio">
+		<label class="label-pad"><input type="radio" name="optradio" value="Meeting">Meeting</label>
+	</div>
+	<div class="radio">
+		<label class="label-pad"><input type="radio" name="optradio" value="Meeting">Free</label>
+	</div>
+	<div class="radio" style="display: inline-block;">
+		<div class="float-extreme-left"><label class="label-pad"><input type="radio" name="optradio" id="task">Task </label></div>
+		<div class="float-mid-left">
+			<input type="text" class="form-control input-sm hide" id="currenttask" placeholder="Current Task" name="currenttask">
+		</div>
+	</div>
+	
+	<div class="col-sm-12 top-10"><button class="btn btn-primary btn-block">Update Status</button></div>
+	<div class="col-sm-12" id="display">&nbsp;</div>
+</form>
+</div>
+</body>
+</html>

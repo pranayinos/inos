@@ -9,6 +9,17 @@ onload = function() {
     };
   }
   
+	var rad = document.forms.statusUpdate.optradio;
+	for(var i = 0; i < rad.length; i++) {
+    rad[i].onclick = function() {
+		$("#currenttask").addClass("hide");
+        if(this.value ==  'on') {
+            $("#currenttask").removeClass("hide");
+		}
+        console.log(this.value)
+    };
+}
+  
   $('#login-button').click(function(){
 	  var datastring = $('#login').serialize();
 	  var url = "http://localhost:4567/login?"+datastring;

@@ -3,7 +3,7 @@ chrome.app.runtime.onLaunched.addListener(function() {
     'id': "mainwin",
 	'outerBounds': {
       'width': 300,
-      'height': 300
+      'height': 380
     },
 	//'frame': 'none'
   });
