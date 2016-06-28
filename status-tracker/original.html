@@ -9,16 +9,6 @@
 	<script src="scripts/window.js"></script>
 	<link rel="stylesheet" href="styles/bootstrap.min.css">
 	
-	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Rammetto+One" />
-	
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-
-	<!-- jQuery library -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-
-	<!-- Latest compiled JavaScript -->
-	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	<style>
 	.well-lg { 
 		background-color: #99b3ff; /* Blue */
@@ -36,6 +26,7 @@
 	font-weight: 500;
 	line-height: 15.4px;
 	}
+	
 	</style>
 </head>
 
@@ -45,7 +36,7 @@
 <div class="well well-lg">
 <div class="col-sm-12 text-center"><h4 class="head"> Login </h4></div>
 <div class="col-sm-12">&nbsp;</div>
-<form role="form" name="login" method="post" action="http://localhost:4567/login" id="login">
+<form role="form" name="login" id="login">
     <div class="form-group">
       <label for="username">Username:</label>
       <input type="text" class="form-control" id="username" placeholder="Username" name="username">
@@ -55,7 +46,7 @@
       <input type="password" class="form-control" id="password" placeholder="Password" name="password">
     </div>
 	<div class="col-sm-12" id="display">&nbsp;</div>
-	<div class="col-sm-12"><button class="btn btn-primary btn-block">Login!</button></div>
+	<div class="col-sm-12"><button class="btn btn-primary btn-block" id="login-button">Login!</button></div>
 </form>
 </div>
 </body>
