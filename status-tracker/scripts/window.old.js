@@ -15,15 +15,19 @@ onload = function() {
 	  var datastring = $.fn.serializeObject();
 	 // var formData = JSON.parse(JSON.stringify(jQuery('#login').serializeArray()))
 	  var url = "http://localhost:8080/app/login";
-	  datastring = "{ \"username\" : \""+ datastring.username +"\", \"password\" : \""+ datastring.password +"\" }";
+	 	
 	  $.ajax({
 		type: "POST",
 		url: url,
-		//async 		: true,
+		headers: {
+			'Access-Control-Allow-Origin' : '*',
+		},
+		async 		: true,
 		data: datastring,
 		contentType : "application/json",
 		success: function(data) {
-			$("#content-replaceable").replaceWith(data);
+        //var obj = jQuery.parseJSON(data); if the dataType is not specified as json uncomment this
+        // do what ever you want with the server response
 		},
 		error: function(error) {
 			alert('error handing here');
@@ -31,10 +35,8 @@ onload = function() {
 	});
  });
  
-   $('#login-button2').click(function(){
-		 window.history.back();
-	 });
-   
+  
+
   var closeNode = document.getElementById('close');
   if (closeNode) {
     closeNode.onclick = function() {

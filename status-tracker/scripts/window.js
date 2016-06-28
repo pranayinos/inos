@@ -9,25 +9,28 @@ onload = function() {
     };
   }
   
+  var closeNode = document.getElementById('close');
+  if (closeNode) {
+    closeNode.onclick = function() {
+      window.close();
+    };
+  }
+
   
    $('#login-button').click(function(){
 	  event.preventDefault();
 	  var datastring = $.fn.serializeObject();
 	 // var formData = JSON.parse(JSON.stringify(jQuery('#login').serializeArray()))
 	  var url = "http://localhost:8080/app/login";
-	 	
+	  datastring = "{ \"username\" : \""+ datastring.username +"\", \"password\" : \""+ datastring.password +"\" }";
 	  $.ajax({
 		type: "POST",
 		url: url,
-		headers: {
-			'Access-Control-Allow-Origin' : '*',
-		},
-		async 		: true,
+		//async 		: true,
 		data: datastring,
 		contentType : "application/json",
 		success: function(data) {
-        //var obj = jQuery.parseJSON(data); if the dataType is not specified as json uncomment this
-        // do what ever you want with the server response
+			$("#content-replaceable").replaceWith(data);
 		},
 		error: function(error) {
 			alert('error handing here');
@@ -35,15 +38,11 @@ onload = function() {
 	});
  });
  
+$('#login-button2').click(function(){
+	 window.history.back();
+ });
  
-
-  var closeNode = document.getElementById('close');
-  if (closeNode) {
-    closeNode.onclick = function() {
-      window.close();
-    };
-  }
-}
+  
 $.fn.serializeObject = function()
 {
     var o = {};
@@ -60,3 +59,4 @@ $.fn.serializeObject = function()
     });
     return o;
 };
+}

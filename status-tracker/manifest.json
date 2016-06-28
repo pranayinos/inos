@@ -3,6 +3,7 @@
   "name": "Employee Status Tracker",
   "version": "1",
   "minimum_chrome_version": "23",
+  "permissions": [ "http://localhost:8080/"],
   "icons": {
     "16": "icon_16.png",
     "128": "icon_128.png"
@@ -12,4 +13,5 @@
       "scripts": ["main.js"]
     }
   }
+
 }
